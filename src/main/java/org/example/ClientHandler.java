@@ -44,6 +44,12 @@ public class ClientHandler implements Runnable {
                                 command
                 );
 
+                if (command.equals("QUIT")) {
+                    writer.println("BYE");
+                    state = ClientState.CLOSED;
+                    break;
+                }
+
                 switch (state) {
 
                     case WAIT_HELLO:
@@ -133,16 +139,7 @@ public class ClientHandler implements Runnable {
     ) {
 
         if (command.equals("ECHO")) {
-
-            writer.println(
-                    "Echo: " + body
-            );
-
-        } else if (command.equals("QUIT")) {
-
-            writer.println("BYE");
-            state = ClientState.CLOSED;
-
+            writer.println("Echo: " + body);
         } else {
             writer.println("UNKNOWN COMMAND");
         }
