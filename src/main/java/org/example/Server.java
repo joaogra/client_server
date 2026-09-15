@@ -22,9 +22,7 @@ public class Server {
 
             ClientHandler handler = new ClientHandler(client);
 
-            Thread thread = new Thread(handler);
-
-            thread.start();
+            Thread.startVirtualThread(handler);
 
         }
 

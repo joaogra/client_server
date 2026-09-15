@@ -1,6 +1,6 @@
 # Cliente-Servidor com Sockets (TCP/IP)
 
-Aplicação multithread em Java que implementa a arquitetura cliente-servidor via Sockets TCP/IP, utilizando uma máquina de estados para controlar a sessão de cada cliente.
+Aplicação multithread em Java que implementa a arquitetura cliente-servidor via Sockets TCP/IP, utilizando Virtual Threads e uma máquina de estados para controlar a sessão de cada cliente.
 
 ## Requisitos
 
